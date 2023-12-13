@@ -1,0 +1,77 @@
+@font-face{
+    font-family: 'SAOUI';
+    src: url(fonts/sword_art_online_font_download_by_darkblackswords_d71zlhb/SAO_Fonts_v4.000/TTF/SAOWelcomeTT-Bold.ttf);
+    src: url(fonts/sword_art_online_font_download_by_darkblackswords_d71zlhb/SAO_Fonts_v4.000/TTF/SAOWelcomeTT-Regular.ttf);
+    src: url(fonts/sword_art_online_font_download_by_darkblackswords_d71zlhb/SAO_Fonts_v4.000/TTF/SAOUITT-Bold.ttf);
+}
+.text1{
+    font-family: 'SAOUI';
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+.text2{
+    font-family:'SAOUI';
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 10px;
+    width: 300px;
+    height: 70px;
+    background-color: #E6E6E6;
+}
+.btn-1{
+    position: relative;
+    top: 20px;
+    left: 70px;
+}
+.btn-2{
+   
+    position: relative;
+   bottom: 20px;
+    left: 180px;
+}
+.btn3{
+    position: absolute;
+    margin-top: 300px;
+    left: 690px;
+   
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+.pop-up{
+    width: 300px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform .04s , top  0.4s ;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    
+}

@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=3.0" />
+  <title>Moodify</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="flex">
+
+    <aside>
+      <a href="#">
+        <div href="#" id="profile">
+          <img src="assets/image/profile.jpg" alt="" />
+        </div>
+        <span>Profile</span>
+      </a>
+      <a href="#">
+        <i class="material-icons">home</i>
+        <span>Home</span>
+      </a>
+      <a href="#">
+        <i class="material-icons">search</i>
+        <span>Search</span>
+      </a>
+      <a href="#">
+        <i class="material-icons">library_music</i>
+        <span>Library</span>
+      </a>
+      <a href="#">
+        <i class="material-icons">history</i>
+        <span class="">Recent</span>
+      </a>
+
+    </aside>
+
+    <main class="main">
+      <div id="music-player">
+        <div id="track-details">
+          <figure id="track-art"></figure>
+          <p id="track-name">Track Name</p>
+          <p id="track-artist">Track Artist</p>
+        </div>
+
+        <div class="slider_container">
+          <span class="current-time">00:00</span>
+          <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+          <span class="total-duration">00:00</span>
+        </div>
+
+        <div id="music-player-buttons">
+          <button onclick="toggleRandom()" id="randomized">
+            <i class="material-icons" title="random">shuffle</i>
+          </button>
+          <button onclick="prevTrack()">
+            <i class="material-icons">skip_previous</i>
+          </button>
+          <button onclick="playpauseTrack()">
+            <i class="material-icons" id="playpause-track">play_arrow</i>
+          </button>
+          <button onclick="nextTrack()">
+            <i class="material-icons">skip_next</i>
+          </button>
+          <button onclick="repeatTrack()">
+            <i class="material-icons" title="repeat">replay</i>
+          </button>
+        </div>
+
+        <div class="slider_container">
+          <i class="material-icons">volume_down</i>
+          <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()" />
+          <i class="material-icons">volume_up</i>
+        </div>
+      </div>
+      <div id="playlist-container">
+        <ul id="playlist"></ul>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
